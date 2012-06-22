@@ -1,1 +1,1 @@
-app: bin/hubot -a irc -n Tomochan
+web: bin/hubot -a irc -n Tomochan
