@@ -1,1 +1,1 @@
-web: bin/hubot -a irc -n Tomochan
+bot: bundle exec ruby Tomochan
