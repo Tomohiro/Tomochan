@@ -6,7 +6,7 @@ class Reply < Kris::Plugin
   end
 
   private
-    def messege_choice(message)
+    def message_choice(message)
       case message
       when /ゆのっち/
         '✘╹◡╹✘ '
