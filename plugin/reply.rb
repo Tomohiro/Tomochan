@@ -10,6 +10,8 @@ class Reply < Kris::Plugin
       case message
       when /ゆのっち/
         '✘╹◡╹✘ '
+      when /ヒロさん/
+        'ζ╹◡╹ζ'
       end
     end
 end
