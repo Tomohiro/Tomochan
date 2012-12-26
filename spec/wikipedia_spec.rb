@@ -8,7 +8,7 @@ describe Wikipedia do
     @wikipedia = Wikipedia.new
   end
 
-  describe 'when search persion' do
+  describe 'when search person' do
     it 'get information in index' do
       response = @wikipedia.response(OpenStruct.new(
         to: '#test',
