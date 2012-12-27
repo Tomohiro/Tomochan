@@ -23,3 +23,15 @@ class Kris::Plugin
     @robot = Zircon.new
   end
 end
+
+class FakeMessage
+  attr_reader :body
+
+  def initialize(body)
+    @body = body
+  end
+
+  def to
+    '#test'
+  end
+end

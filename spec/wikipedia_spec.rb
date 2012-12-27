@@ -9,29 +9,22 @@ describe Wikipedia do
   end
 
   describe 'when search person' do
-    it 'get information in index' do
-      response = @wikipedia.response(OpenStruct.new(
-        to: '#test',
-        body: 'まつもとゆきひろって誰'
-      ))
+    it 'should get information in index' do
+      response = @wikipedia.response(FakeMessage.new('まつもとゆきひろって誰'))
       response.last.must_equal(URI.escape('http://ja.wikipedia.org/wiki/まつもとゆきひろ'))
     end
   end
 
   describe 'when search word' do
-    it 'get information after transferred' do
-      response = @wikipedia.response(OpenStruct.new(
-        to: '#test',
-        body: 'ほげって何'
-      ))
+    it 'should get information after transferred' do
+      response = @wikipedia.response(FakeMessage.new('ほげって何'))
       response.last.must_equal(URI.escape('http://ja.wikipedia.org/wiki/ほげ'))
     end
+  end
 
+  describe 'when search not exist keyword' do
     it 'information is not found' do
-      response = @wikipedia.response(OpenStruct.new(
-        to: '#test',
-        body: 'Not Found Search Result って何'
-      ))
+      response = @wikipedia.response(FakeMessage.new('Not Found Search Result って何'))
       response.last.must_equal(':Not Found')
     end
   end
