@@ -2,11 +2,22 @@
 
 require 'kris'
 
-Kris::Session.new(
-  :server   => ENV['IRC_SERVER'],
-  :port     => ENV['IRC_PORT'],
-  :channel  => ENV['IRC_CHANNEL'],
-  :username => ENV['IRC_NICK'],
-  :nickname => ENV['IRC_NICK'],
-  :realname => ENV['IRC_NICK']
-).start
+if ENV['KRIS_ENV'] == 'production'
+  config = {
+    server:   ENV['IRC_SERVER'],
+    port:     ENV['IRC_PORT'],
+    channel:  ENV['IRC_CHANNEL'],
+    username: ENV['IRC_NICK'],
+    nickname: ENV['IRC_NICK'],
+    realname: ENV['IRC_NICK']
+  }
+else
+  config = {
+    server:   'chat.freenode.net',
+    port:     6667,
+    channel:  '#rig',
+    username: 'TomochanTest'
+  }
+end
+
+Kris::Session.new(config).start
