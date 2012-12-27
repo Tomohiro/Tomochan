@@ -12,9 +12,7 @@ class Wikipedia < Kris::Plugin
         notice(channel, result)
       end
     end
-  rescue => e
-    notice(@robot.channel, e)
-    e.backtrace.each { |l| notice(@robot.channel, l) }
+  rescue
     notice(channel, 'Not Found')
   end
 
