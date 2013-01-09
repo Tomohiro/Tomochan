@@ -11,7 +11,6 @@ describe Fortune do
   describe 'when consult an oracle' do
     it 'should get message' do
       response = @fortune.response(FakeMessage.new('おみくじ'))
-      p response
       response.last.must_match(/仕事運/)
     end
   end
