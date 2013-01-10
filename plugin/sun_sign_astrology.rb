@@ -7,15 +7,12 @@ class SunSignAstrology < Kris::Plugin
   NotFoundError = Class.new(StandardError)
 
   def response(message)
-    channel = message.to
-    message = message.body
-
-    if message =~ /(?<constellatio>.+)の運勢教えて/
+    if message.body =~ /(?<constellatio>.+)の運勢教えて/
       rank = get_rank($~[:constellatio])
-      notice(channel, "#{rank[:name]} #{rank[:rank]} #{rank[:desc]} (#{rank[:link]})")
+      notice(message.to, "#{rank[:name]} #{rank[:rank]} #{rank[:desc]} (#{rank[:link]})")
     end
   rescue NotFoundError
-    notice(channel, 'Not Found')
+    notice(message.to, 'Not Found')
   rescue => e
     notice(@robot.channel, "#{self.class} #{e.to_s}")
   end
