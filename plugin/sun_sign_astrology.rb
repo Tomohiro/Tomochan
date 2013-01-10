@@ -3,7 +3,6 @@
 require 'open-uri'
 require 'nokogiri'
 
-
 class SunSignAstrology < Kris::Plugin
   NotFoundError = Class.new(StandardError)
 
