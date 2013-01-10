@@ -1,43 +1,46 @@
 # encoding: utf-8
 
-require 'kconv'
 require 'open-uri'
 require 'nokogiri'
 
+
 class SunSignAstrology < Kris::Plugin
+  NotFoundError = Class.new(StandardError)
+
   def response(message)
     channel = message.to
     message = message.body
 
-    if message =~ /(.+)の運勢教えて/
-      result = ''
-      constellatio = $1
-      rank = get_ranking.find { |r| r[:name].value == constellatio.toutf8 }
+    if message =~ /(?<constellatio>.+)の運勢教えて/
+      rank = get_rank($~[:constellatio])
       notice(channel, "#{rank[:name]} #{rank[:rank]} #{rank[:desc]} (#{rank[:link]})")
     end
+  rescue NotFoundError
+    notice(channel, 'Not Found')
   rescue => e
     notice(@robot.channel, "#{self.class} #{e.to_s}")
   end
 
   private
-    def get_ranking
+    def get_rank(constellatio)
       doc = Nokogiri::HTML(open('http://fortune.yahoo.co.jp/12astro/ranking.html'))
 
-      names = doc/'td/p/img'
-      ranks = doc/'td/img'
-      descs = doc/'p.ft01/a'
+      names = doc.search('td/p/img')
+      ranks = doc.search('td/img')
+      descs = doc.search('p.ft01/a')
 
-      ranking = []
       names.each_with_index do |name, desc_counter|
         rank_counter = desc_counter + 1
-        ranking << {
-          :name => name.attributes['alt'],
-          :rank => ranks[rank_counter].attributes['alt'],
-          :desc => descs[desc_counter].text,
-          :link => descs[desc_counter].attributes['href']
+        rank = {
+          name: name.attributes['alt'].text,
+          rank: ranks[rank_counter].attributes['alt'].text,
+          desc: descs[desc_counter].text,
+          link: descs[desc_counter].attributes['href'].text
         }
+
+        return rank if rank[:name] == constellatio
       end
 
-      ranking
+      raise NotFoundError
     end
 end
