@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 require 'spec_helper'
-require 'google'
+require 'google_search'
 
 describe GoogleSearch do
   before do
