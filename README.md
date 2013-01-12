@@ -1,7 +1,7 @@
 Tomochan
 ================================================================================
 
-[![Build Status](https://secure.travis-ci.org/Tomohiro/Tomochan.png)](https://secure.travis-ci.org/Tomohiro/Tomochan)
+[![Build Status](https://travis-ci.org/Tomohiro/Tomochan.png?branch=master)](https://travis-ci.org/Tomohiro/Tomochan)
 [![Dependency Status](https://gemnasium.com/Tomohiro/Tomochan.png)](https://gemnasium.com/Tomohiro/Tomochan)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Tomohiro/Tomochan)
 
