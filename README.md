@@ -17,9 +17,11 @@ Tomochan
 4. Deploy app
 
 
-    $ git clone https://github.com/Tomohiro/Tomochan.git
-    $ cd Tomochan
-    $ heroku create your_favorite_bot_name
-    $ heroku config add:KRIS_ENV=production IRC_SERVER=... IRC_PORT=... IRC_CHANNEL=... IRC_NICK=...
-    $ git push heroku master
-    $ heroku ps:scale bot=1
+```sh
+$ git clone https://github.com/Tomohiro/Tomochan.git
+$ cd Tomochan
+$ heroku create your_favorite_bot_name
+$ heroku config add:KRIS_ENV=production IRC_SERVER=... IRC_PORT=... IRC_CHANNEL=... IRC_NICK=...
+$ git push heroku master
+$ heroku ps:scale bot=1
+```
