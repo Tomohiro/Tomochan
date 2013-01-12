@@ -3,10 +3,6 @@
 require 'google-search'
 
 class GoogleSearch < Kris::Plugin
-  def initialize(*args)
-    super
-
-  end
   def response(message)
     if message.body =~ /(?<keyword>.+)探してきて/
       search($~[:keyword])[0..2].each do |result|
