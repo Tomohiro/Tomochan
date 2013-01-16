@@ -19,15 +19,15 @@ class MovieShowtime < Kris::Plugin
 
       html = Nokogiri::HTML(open('http://www.startheaters.jp/schedule'))
       html.search('div.unit_block').each do |movie_info|
-        title = movie_info.at('h3/a').text
+        movie_title = movie_info.at('h3/a').text
 
-        if title =~ Regexp.new(Regexp.quote(search_title))
+        if movie_title =~ /#{Regexp.quote(search_title)}/
           site  = movie_info.at('div.pic_block/a[@target="_blank"]').attributes['href']
-          results << "#{title.gsub('　', '')}  #{site}"
+          results << "#{movie_title.gsub('　', '')}  #{site}"
 
-          (movie_info/'table.set_d').each do |screen|
+          movie_info.search('table.set_d').each do |screen|
             movie = [" - [#{screen.at('th.cinema/img').attributes['alt']}]"]
-            (screen/'td').each do |time|
+            screen.search('td').each do |time|
               movie << time.text unless time.text.to_i == 0
             end
             results << movie.join('  ')
@@ -41,12 +41,12 @@ class MovieShowtime < Kris::Plugin
       theater_name = '[桜坂劇場]'
       results = []
 
-      html = Nokogiri::HTML(open('http://www.google.co.jp/movies?tid=3d1a4be489681836'))
+      html = Nokogiri::HTML(open(URI.escape('http://www.google.co.jp/movies?near=沖縄&tid=3d1a4be489681836')))
       html.search('div.movie').each do |movie_info|
-        movie_title = movie_info.at('div.name/a/span[@dir="ltr"]').text
+        movie_title = movie_info.at('div.name/a').text
 
-        if movie_title =~ expression
-          time = movie_info.inner_html.scan(/(..:..+?)</).last
+        if movie_title =~ /#{Regexp.quote(search_title)}/
+          time = movie_info.search('div.times/span').text.gsub('&nbsp', '')
           results << "#{theater_name} #{movie_title} #{time} (http://www.sakura-zaka.com/)"
         end
       end
