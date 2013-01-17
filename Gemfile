@@ -6,4 +6,5 @@ gem 'google-search'
 
 group :development do
   gem 'rake'
+  gem 'guard-minitest'
 end
