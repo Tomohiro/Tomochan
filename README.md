@@ -1,9 +1,9 @@
 Tomochan
 ================================================================================
 
-[![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](http://stillmaintained.com/Tomohiro/Tomochan)
 [![Build Status](https://travis-ci.org/Tomohiro/Tomochan.png?branch=master)](https://travis-ci.org/Tomohiro/Tomochan)
 [![Dependency Status](https://gemnasium.com/Tomohiro/Tomochan.png)](https://gemnasium.com/Tomohiro/Tomochan)
+[![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](http://stillmaintained.com/Tomohiro/Tomochan)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Tomohiro/Tomochan)
 
 
@@ -62,3 +62,11 @@ Use `minitest/spec`. Reference are below.
 
 - [library minitest/spec](http://doc.ruby-lang.org/ja/1.9.3/library/minitest=2fspec.html)
 - [A MiniTest::Spec Tutorial: Elegant Spec-Style Testing That Comes With Ruby](http://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html)
+
+
+LICENSE
+--------------------------------------------------------------------------------
+
+&copy; 2013 Tomohiro TAIRA.
+This project is licensed under the MIT license.
+See LICENSE for details.
