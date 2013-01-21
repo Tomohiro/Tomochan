@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/Tomohiro/kris.git
-  revision: eec71e64558c0deb457b27b87daf9c99f83068f0
-  specs:
-    kris (0.0.1)
-      zircon
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -21,6 +14,8 @@ GEM
     guard-minitest (0.5.0)
       guard (>= 0.4)
     json (1.7.6)
+    kris (0.0.1)
+      zircon
     listen (0.7.2)
     lumberjack (1.0.2)
     mechanize (2.5.1)
@@ -37,7 +32,7 @@ GEM
     net-http-persistent (2.8)
     nokogiri (1.5.6)
     ntlm-http (0.1.1)
-    pry (0.9.11.2)
+    pry (0.9.11.4)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
@@ -56,6 +51,6 @@ PLATFORMS
 DEPENDENCIES
   google-search
   guard-minitest
-  kris!
+  kris
   mechanize
   rake
