@@ -18,7 +18,7 @@ Screenshot
 Deploy to Heroku
 --------------------------------------------------------------------------------
 
-1. Git clone
+1. Git clone this repository
 2. Create app on Heroku
 3. Configure environment variables
 4. Deploy app
@@ -33,12 +33,30 @@ Commands
     $ heroku ps:scale bot=1
 
 
-Plugin development flow
+Development
 --------------------------------------------------------------------------------
+
+### Getting started
+
+1. Git clone this repository
+2. Install RubyGems
+3. Configure IRC settings
+4. Run bot
+
+Commands
+
+    $ git clone https://github.com/Tomohiro/Tomochan.git
+    $ cd Tomochan
+    $ bundle install --deployment
+    $ vi Tomochan
+    $ bundle exec ./Tomochan
+
+
+### Plugin development flow
 
 If you want to create a `awesome` plugin.
 
-First, create a spec. For spec examples, see `spec` directory.
+First, create a plugin spec file. For spec examples, see `spec` directory.
 
     $ vi spec/awesome_spec.rb
 
@@ -51,7 +69,7 @@ Last, run test.
     $ rake test
 
 
-#### Automation test by Guard
+#### Automate test by Guard
 
     $ bundle exec guard
 
