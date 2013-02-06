@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'kris'
+gem 'kris', :git => 'git://github.com/Tomohiro/kris.git'
 gem 'mechanize'
 gem 'google-search'
 
