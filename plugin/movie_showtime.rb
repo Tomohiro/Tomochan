@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 
 class MovieShowtime < Kris::Plugin
-  def response(message)
+  def on_privmsg(message)
     if message.body =~ /^(?<movie>.+)の上映時間教えて$/
       results = startheaters($~[:movie]) + sakurazaka($~[:movie])
       results.each do |showtime|

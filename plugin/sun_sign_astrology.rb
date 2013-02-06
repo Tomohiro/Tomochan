@@ -6,7 +6,7 @@ require 'nokogiri'
 class SunSignAstrology < Kris::Plugin
   NotFoundError = Class.new(StandardError)
 
-  def response(message)
+  def on_privmsg(message)
     if message.body =~ /(?<constellatio>.+)の運勢教えて/
       rank = get_rank($~[:constellatio])
       notice(message.to, "#{rank[:name]} #{rank[:rank]} #{rank[:desc]} (#{rank[:link]})")

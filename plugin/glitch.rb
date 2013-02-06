@@ -7,7 +7,7 @@
 class Glitch < Kris::Plugin
   GLITCH_TABLE = ("\u0300".."\u036f").to_a
 
-  def response(message)
+  def on_privmsg(message)
     if message.body =~ /^(glitch) (?<str>.+?)$/
       notice(message.to, glitch($~[:str]))
     end

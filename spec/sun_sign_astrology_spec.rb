@@ -10,10 +10,10 @@ describe SunSignAstrology do
 
   describe 'when query constellatio' do
     it 'should get message' do
-      response = @sun_sign_astrology.response(FakeMessage.new('おとめ座の運勢教えて'))
+      response = @sun_sign_astrology.on_privmsg(FakeMessage.new('おとめ座の運勢教えて'))
       response.last.must_match(/おとめ座/)
 
-      response = @sun_sign_astrology.response(FakeMessage.new('ほげ座の運勢教えて'))
+      response = @sun_sign_astrology.on_privmsg(FakeMessage.new('ほげ座の運勢教えて'))
       response.last.must_match(/Not Found/)
     end
   end

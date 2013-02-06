@@ -10,18 +10,18 @@ describe Eijiro do
 
   describe 'when translate japanaese keyword' do
     it 'should get english' do
-      response = @eijiro.response(FakeMessage.new('eijiro 認証'))
+      response = @eijiro.on_privmsg(FakeMessage.new('eijiro 認証'))
       response.size.must_equal(2)
-      response = @eijiro.response(FakeMessage.new('alc 認証'))
+      response = @eijiro.on_privmsg(FakeMessage.new('alc 認証'))
       response.size.must_equal(2)
     end
   end
 
   describe 'when translate english keyword' do
     it 'should get japanese' do
-      response = @eijiro.response(FakeMessage.new('eijiro authentication'))
+      response = @eijiro.on_privmsg(FakeMessage.new('eijiro authentication'))
       response.size.must_equal(2)
-      response = @eijiro.response(FakeMessage.new('alc authentication'))
+      response = @eijiro.on_privmsg(FakeMessage.new('alc authentication'))
       response.size.must_equal(2)
     end
   end

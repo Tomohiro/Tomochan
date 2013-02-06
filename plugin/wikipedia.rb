@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 
 class Wikipedia < Kris::Plugin
-  def response(message)
+  def on_privmsg(message)
     channel = message.to
     message = message.body
     if message =~ /(?<keyword>.+)って(何|なに|誰|だれ)/

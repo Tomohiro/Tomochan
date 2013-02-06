@@ -4,7 +4,7 @@ require 'mechanize'
 require 'open-uri'
 
 class Url < Kris::Plugin
-  def response(message)
+  def on_privmsg(message)
     channel = message.to
     message = message.body
 

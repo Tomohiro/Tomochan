@@ -10,7 +10,7 @@ describe Glitch do
 
   describe 'when word to glitch' do
     it 'should get glitched words' do
-      response = @glitch.response(FakeMessage.new('glitch Hello, World!'))
+      response = @glitch.on_privmsg(FakeMessage.new('glitch Hello, World!'))
       response.last.wont_equal('Hello, World!')
     end
   end

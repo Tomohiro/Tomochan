@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 
 class Eijiro < Kris::Plugin
-  def response(message)
+  def on_privmsg(message)
     if message.body =~ /^(eijiro|alc) (?<keyword>.+?)$/
       notice(message.to, translate($~[:keyword]))
     end

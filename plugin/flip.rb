@@ -40,7 +40,7 @@ class Flip < Kris::Plugin
     "\u2234" => "\u2235"
   }
 
-  def response(message)
+  def on_privmsg(message)
     if message.body =~ /^(flip) (?<str>.+?)$/
       notice(message.to, flip($~[:str]))
     end

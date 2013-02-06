@@ -4,7 +4,7 @@ require 'cgi'
 require 'google-search'
 
 class GoogleSearch < Kris::Plugin
-  def response(message)
+  def on_privmsg(message)
     if message.body =~ /(?<keyword>.+)探してきて/
       search($~[:keyword])[0..2].each do |result|
         notice(message.to, result)

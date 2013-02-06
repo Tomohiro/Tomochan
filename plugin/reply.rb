@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class Reply < Kris::Plugin
-  def response(message)
+  def on_privmsg(message)
     notice(message.to, message_choice(message.body))
   end
 

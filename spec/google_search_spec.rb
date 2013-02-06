@@ -10,7 +10,7 @@ describe GoogleSearch do
 
   describe 'when search keyword' do
     it 'should get search result' do
-      response = @google.response(FakeMessage.new('GitHub探してきて'))
+      response = @google.on_privmsg(FakeMessage.new('GitHub探してきて'))
       response.size.must_equal(3)
     end
   end

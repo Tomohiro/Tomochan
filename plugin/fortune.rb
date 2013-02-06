@@ -12,7 +12,7 @@ class Fortune < Kris::Plugin
     )
   end
 
-  def response(message)
+  def on_privmsg(message)
     if message.body == 'おみくじ'
       notice(message.to, oracle)
     end

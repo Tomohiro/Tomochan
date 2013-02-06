@@ -10,7 +10,7 @@ describe Flip do
 
   describe 'when word to flip' do
     it 'should get fliped words' do
-      response = @flip.response(FakeMessage.new('flip Hello, World!'))
+      response = @flip.on_privmsg(FakeMessage.new('flip Hello, World!'))
       response.last.wont_equal('Hello, World!')
     end
   end
