@@ -1,10 +1,9 @@
-Tomochan
+Tomochan [![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](http://stillmaintained.com/Tomohiro/Tomochan)
 ================================================================================
 
-[![Build Status](https://travis-ci.org/Tomohiro/Tomochan.png?branch=master)](https://travis-ci.org/Tomohiro/Tomochan)
 [![Dependency Status](https://gemnasium.com/Tomohiro/Tomochan.png)](https://gemnasium.com/Tomohiro/Tomochan)
-[![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](http://stillmaintained.com/Tomohiro/Tomochan)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Tomohiro/Tomochan)
+[![Build Status](https://travis-ci.org/Tomohiro/Tomochan.png?branch=master)](https://travis-ci.org/Tomohiro/Tomochan)
+[![Code Climate](https://codeclimate.com/github/Tomohiro/Tomochan.png)](https://codeclimate.com/github/Tomohiro/Tomochan)
 
 
 ---
@@ -13,6 +12,12 @@ Screenshot
 --------------------------------------------------------------------------------
 
 ![Tomochan](http://cl.ly/image/0U3l3T2P050G/Tomochan.png)
+
+
+Requirements
+--------------------------------------------------------------------------------
+
+- Ruby 2.0.0
 
 
 Deploy to Heroku
