@@ -1,7 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    coderay (1.0.8)
+    activesupport (3.2.12)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    coderay (1.0.9)
     domain_name (0.5.7)
       unf (~> 0.0.3)
     google-search (1.0.3)
@@ -14,10 +17,12 @@ GEM
       thor (>= 0.14.6)
     guard-minitest (0.5.0)
       guard (>= 0.4)
-    json (1.7.6)
-    kris (0.0.2)
+    i18n (0.6.2)
+    json (1.7.7)
+    kris (0.0.3)
+      activesupport (~> 3.2.12)
       zircon
-    listen (0.7.2)
+    listen (0.7.3)
     lumberjack (1.0.2)
     mechanize (2.5.1)
       domain_name (~> 0.5, >= 0.5.1)
@@ -28,12 +33,13 @@ GEM
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (~> 0.0, >= 0.0.9)
     method_source (0.8.1)
-    mime-types (1.20.1)
+    mime-types (1.21)
+    multi_json (1.6.1)
     net-http-digest_auth (1.2.1)
     net-http-persistent (2.8)
     nokogiri (1.5.6)
     ntlm-http (0.1.1)
-    pry (0.9.11.4)
+    pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
@@ -43,9 +49,9 @@ GEM
     thor (0.17.0)
     unf (0.0.5)
       unf_ext
-    unf_ext (0.0.5)
-    webrobots (0.0.13)
-    zircon (0.0.5)
+    unf_ext (0.0.6)
+    webrobots (0.1.0)
+    zircon (0.0.6)
 
 PLATFORMS
   ruby
