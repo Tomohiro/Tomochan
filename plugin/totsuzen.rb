@@ -22,9 +22,9 @@ class Totsuzen < Kris::Plugin
       footer = '^Y' * (width / 2)
 
       [
-        "＿人#{header}人＿}",
+        "＿人#{header}人＿",
         "＞  #{display_keyword}  ＜",
-        "￣Y#{footer}^Y￣"
+        "￣Y#{footer}￣"
       ]
     end
 end
