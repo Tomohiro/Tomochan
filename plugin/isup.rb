@@ -4,8 +4,6 @@ require 'open-uri'
 require 'nokogiri'
 
 class Isup < Kris::Plugin
-  NotFoundError = Class.new(StandardError)
-
   def on_privmsg(message)
     if message.body =~ /^is (?<domain>.*?) (up|down)(\?)?/
       notice(message.to, up?($~[:domain]))
