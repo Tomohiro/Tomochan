@@ -4,6 +4,8 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    addressable (2.3.4)
+    awesome_print (1.1.0)
     coderay (1.0.9)
     colorize (0.5.8)
     coveralls (0.6.7)
@@ -16,6 +18,9 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     ffi (1.8.1)
     formatador (0.2.4)
+    gingerice (1.1.0)
+      addressable
+      awesome_print
     google-search (1.0.3)
       json
     guard (1.8.0)
@@ -81,6 +86,7 @@ PLATFORMS
 
 DEPENDENCIES
   coveralls
+  gingerice
   google-search
   guard-minitest
   kris
