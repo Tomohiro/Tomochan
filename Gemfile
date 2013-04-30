@@ -10,4 +10,5 @@ gem 'unicode-display_width' # plugin/totsuzen.rb
 group :development do
   gem 'rake'
   gem 'guard-minitest'
+  gem 'coveralls'
 end

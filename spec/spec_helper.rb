@@ -8,6 +8,9 @@ require 'minitest/autorun'
 
 require 'kris'
 
+require 'coveralls'
+Coveralls.wear!
+
 class Zircon
   attr_reader :channel
 
