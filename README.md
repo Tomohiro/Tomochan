@@ -3,6 +3,7 @@ Tomochan [![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](
 
 [![Dependency Status](https://gemnasium.com/Tomohiro/Tomochan.png)](https://gemnasium.com/Tomohiro/Tomochan)
 [![Build Status](https://travis-ci.org/Tomohiro/Tomochan.png?branch=master)](https://travis-ci.org/Tomohiro/Tomochan)
+[![Coverage Status](https://coveralls.io/repos/Tomohiro/Tomochan/badge.png?branch=master)](https://coveralls.io/r/Tomohiro/Tomochan)
 [![Code Climate](https://codeclimate.com/github/Tomohiro/Tomochan.png)](https://codeclimate.com/github/Tomohiro/Tomochan)
 
 
