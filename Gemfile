@@ -7,6 +7,7 @@ gem 'mechanize'
 gem 'google-search'         # plugin/google_search.rb
 gem 'unicode-display_width' # plugin/totsuzen.rb
 gem 'gingerice'             # plugin/gingerice.rb
+gem 'tumblr_client'         # plugin/tumblr.rb
 
 group :development do
   gem 'rake'
