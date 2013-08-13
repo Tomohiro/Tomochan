@@ -10,8 +10,8 @@ describe TumblrPhoto do
 
   describe 'when give text' do
     it 'should get correct text' do
-      person = '吉高由里子'
-      response = @tumblr.on_privmsg(FakeMessage.new("img #{person}"))
+      return unless ENV['TUMBLR_CONSUMER_KEY']
+      response = @tumblr.on_privmsg(FakeMessage.new("img 吉高由里子"))
       response[1].must_match(/tumblr/)
     end
   end

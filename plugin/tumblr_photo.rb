@@ -24,7 +24,11 @@ class TumblrPhoto < Kris::Plugin
       items.select! do |item|
         item['type'] == 'photo'
       end
-      return 'Not found' unless items.size
+
+      raise StandardError.new unless items.size
+
       items.sample['photos'][0]['alt_sizes'][0]['url']
+    rescue
+      'Not found'
     end
 end
