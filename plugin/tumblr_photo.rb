@@ -9,6 +9,7 @@ class TumblrPhoto < Kris::Plugin
       config.consumer_key    = ENV['TUMBLR_CONSUMER_KEY']
       config.consumer_secret = ENV['TUMBLR_CONSUMER_SECRET']
     end
+    @tumblr = Tumblr::Client.new
   end
 
   def on_privmsg(message)
@@ -19,17 +20,11 @@ class TumblrPhoto < Kris::Plugin
 
   private
     def photo_url(keyword)
-       client = Tumblr::Client.new
-       photo_urls = [];
-
-       posts = client.tagged(keyword)
-       posts.each do |post|
-         if post['type'] == 'photo'
-           post['photos'].each do |photo|
-             photo_urls << photo['alt_sizes'][0]['url']
-           end
-         end
-       end
-       photo_urls[rand(photo_urls.length)]
+      items = @tumblr.tagged(keyword)
+      items.select! do |item|
+        item['type'] == 'photo'
+      end
+      return 'Not found' unless items.size
+      items.sample['photos'][0]['alt_sizes'][0]['url']
     end
 end
