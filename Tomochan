@@ -7,7 +7,6 @@ if ENV['KRIS_ENV'] == 'production'
     server:   ENV['IRC_SERVER'],
     port:     ENV['IRC_PORT'],
     channel:  ENV['IRC_CHANNEL'],
-    channels: ENV['IRC_CHANNELS'].split(','),
     nickname: ENV['IRC_NICK'],
     username: ENV['IRC_USER'],
     passowrd: ENV['IRC_PASS'],
