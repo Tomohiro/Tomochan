@@ -8,16 +8,18 @@ if ENV['KRIS_ENV'] == 'production'
     port:     ENV['IRC_PORT'],
     channel:  ENV['IRC_CHANNEL'],
     channels: ENV['IRC_CHANNELS'].split(','),
-    username: ENV['IRC_NICK'],
     nickname: ENV['IRC_NICK'],
-    realname: ENV['IRC_NICK']
+    username: ENV['IRC_USER'],
+    passowrd: ENV['IRC_PASS'],
+    realname: ENV['IRC_USER'],
+    use_ssl:  true
   }
 else
   config = {
     server:   'chat.freenode.net',
     port:     6667,
-    channel:  '#rig',
-    username: 'TomochanTest'
+    channel:  '#Tomohiro',
+    username: 'Tomochan'
   }
 end
 
