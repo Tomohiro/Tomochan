@@ -9,7 +9,7 @@ if ENV['KRIS_ENV'] == 'production'
     channel:  ENV['IRC_CHANNEL'],
     nickname: ENV['IRC_NICK'],
     username: ENV['IRC_USER'],
-    passowrd: ENV['IRC_PASS'],
+    password: ENV['IRC_PASS'],
     realname: ENV['IRC_USER'],
     use_ssl:  true
   }
