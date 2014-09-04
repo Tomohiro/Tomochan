@@ -2,7 +2,8 @@
 
 class Reply < Kris::Plugin
   def on_privmsg(message)
-    notice(message.to, message_choice(message.body))
+    response = message_choice(message.body)
+    notice(message.to, response) if response
   end
 
   private
@@ -12,6 +13,8 @@ class Reply < Kris::Plugin
         '✘╹◡╹✘ '
       when /ヒロさん/
         'ζ╹◡╹ζ'
+      else
+        nil
       end
     end
 end
