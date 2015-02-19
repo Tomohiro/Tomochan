@@ -1,10 +1,11 @@
-Tomochan [![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](http://stillmaintained.com/Tomohiro/Tomochan)
+Tomochan
 ================================================================================
 
-[![Dependency Status](https://gemnasium.com/Tomohiro/Tomochan.png)](https://gemnasium.com/Tomohiro/Tomochan)
-[![Build Status](https://travis-ci.org/Tomohiro/Tomochan.png?branch=master)](https://travis-ci.org/Tomohiro/Tomochan)
-[![Coverage Status](https://coveralls.io/repos/Tomohiro/Tomochan/badge.png?branch=master)](https://coveralls.io/r/Tomohiro/Tomochan)
-[![Code Climate](https://codeclimate.com/github/Tomohiro/Tomochan.png)](https://codeclimate.com/github/Tomohiro/Tomochan)
+[![Stillmaintained](http://stillmaintained.com/Tomohiro/Tomochan.png)](http://stillmaintained.com/Tomohiro/Tomochan)
+[![Dependency Status](https://img.shields.io/gemnasium/Tomohiro/Tomochan.svg?style=flat-square)](https://gemnasium.com/Tomohiro/Tomochan)
+[![Build Status](https://img.shields.io/travis/Tomohiro/Tomochan.svg?style=flat-square)](https://travis-ci.org/Tomohiro/Tomochan)
+[![Coverage Status](https://img.shields.io/coveralls/Tomohiro/Tomochan.svg?style=flat-square)](https://coveralls.io/r/Tomohiro/Tomochan)
+[![Code Climate](https://img.shields.io/codeclimate/github/Tomohiro/Tomochan.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/Tomochan)
 
 
 ---
@@ -18,7 +19,7 @@ Screenshot
 Requirements
 --------------------------------------------------------------------------------
 
-- Ruby 2.0.0
+- Ruby 2.2.0
 
 
 Deploy to Heroku
@@ -91,6 +92,6 @@ Use `minitest/spec`. Reference are below.
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2013 Tomohiro TAIRA.
+&copy; 2013 - 2015 Tomohiro TAIRA.
 This project is licensed under the MIT license.
 See LICENSE for details.
