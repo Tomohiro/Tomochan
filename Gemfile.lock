@@ -9,7 +9,7 @@ GEM
       tzinfo (~> 0.3.37)
     addressable (2.3.8)
     awesome_print (1.6.1)
-    coveralls (0.7.12)
+    coveralls (0.8.0)
       multi_json (~> 1.10)
       rest-client (>= 1.6.8, < 2)
       simplecov (~> 0.9.1)
